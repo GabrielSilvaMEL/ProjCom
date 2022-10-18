@@ -15,7 +15,20 @@ return new class extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
+            $table->string("nome");
+            $table->string("descricao");
+            $table->float("preco");
+            $table->integer("quantidade");
             $table->timestamps();
+
+            $table->unsignedInteger("categoria_id");
+            $table->foreign("categoria_id")
+                ->references("id")
+                ->on("categorias");
+            $table->unsignedInteger("fornecedor_id");
+            $table->foreign("fornecedor_id")
+                ->references("id")
+                ->on("fornecedores");
         });
     }
 
