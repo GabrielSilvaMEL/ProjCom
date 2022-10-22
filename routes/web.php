@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\FornecedorController;
+use App\Http\Controllers\ProdutoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
