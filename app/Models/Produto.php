@@ -15,4 +15,13 @@ class Produto extends Model
         'qtde',
         'preco'
     ];
+    public function categoria(){
+        return $this->belongTo(Categoria::class);
+    }
+
+    public function fornecedor(){
+        return $this->belongsTo(Fornecedor::class);
+    }
+
+    public function comprasProduto(){}
 }
